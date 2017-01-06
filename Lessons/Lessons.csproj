@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InheritancePolymorphism\InheritancePolymirphism.cs" />
+    <Compile Include="AbstractInterface.cs" />
+    <Compile Include="InheritancePolymirphism.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
