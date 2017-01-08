@@ -10,7 +10,7 @@ namespace Lessons
     {
         public virtual void PrintName(string FirstName, string LastName)
         {
-            Console.WriteLine(FirstName + " " + LastName + " - Parent Class 2");
+            Console.WriteLine(FirstName + " " + LastName + " - Parent Class");
         }
     }
     class ChildClass1 : ParentClass

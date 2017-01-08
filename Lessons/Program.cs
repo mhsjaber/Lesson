@@ -11,6 +11,15 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
+            float floatval = 923241;
+            int intval1 = (int)floatval; //If float value is greater than int.Max then it will do unexpected behaviour without throwing error. 
+            int intval2 = Convert.ToInt32(floatval); //Throw an error
+
+            string strval = "100";
+            int intval3 = int.Parse(strval); //Throw an error if string have non-numeric value
+            int intval4 = 0;
+            int.TryParse(strval, out intval4);//If string has real number intval4 will 100, otherwise 0.
+
             int a = 10;
             Ref(ref a); //REFERENCE parameter; REFERENCE is almost like as POINTER; But not STATIC 
 
@@ -20,10 +29,10 @@ namespace Lessons
             ArrayParameter(1, 2, 3, 4); //ARRAY parameter
 
             ParentClass pc = new ChildClass1();
-            pc.PrintName("Jaber", "Kibria");  //Function OVERRIDING (in Polymorphism)
+            pc.PrintName("Jaber", "Kibria");  //Function OVERRIDING (in Polymorphism). Execute Child class method by using virtual-override.
 
-            ChildClass2 cc = new ChildClass2();
-            cc.PrintName("Jaber", "Kibria");  //Function HIDING (in Inheritance)
+            ParentClass pc1 = new ChildClass2();
+            pc1.PrintName("Jaber", "Kibria");  //Function HIDING (in Inheritance)
 
             Add(1, 3); //Function OVERLOADING (functions can be overloaded by different type/number of parameters)
 
